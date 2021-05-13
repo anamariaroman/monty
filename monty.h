@@ -40,5 +40,7 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/* FUNCIONES */
+void commands(stack_t **stack, char *op, unsigned int line_num)
 
 #endif
