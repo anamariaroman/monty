@@ -12,11 +12,19 @@ void commands(stack_t **stack, char *op, unsigned int line_num)
 {
 	int i;
 	instruction_t ops[] = {
-		{"push", push},
-		{"pall", pall},
-		{"pint", pint},
+		{"push", prueba_print},
+		/*{"pall", pall},*/
 		{NULL, NULL}
 	};
+
+	for (i = 0; ops[i].opcode; i++)
+	{
+		if (strcmp(op, ops[i].opcode) == 0)
+		{
+			ops[i].f(stack, line_num);
+			return;
+		}
+	}
 
 	if (strlen(op) != 0 && op[0] != '#')
 	{

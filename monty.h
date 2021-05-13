@@ -9,6 +9,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <string.h>
+#include <unistd.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -40,7 +41,15 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/* VARIABLE */
+extern stack_t **global_queue;
+
 /* FUNCIONES */
+int main(int argc, char *argv[]);
+void open_file(char *file, stack_t **stack);
+void prueba_print(stack_t **stack, unsigned int line_number);
 void commands(stack_t **stack, char *op, unsigned int line_num);
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
 
 #endif
