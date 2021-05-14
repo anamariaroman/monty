@@ -7,24 +7,32 @@
  */
 void _push(stack_t **stack, unsigned int count)
 {
-	int a;
+	char *n;
+	stack_t *node;
 
-	if (!global_queue)
+	n = strtok(NULL, " \n\r\t");
+	if (n == NULL)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", count);
-		global_queue = "error";
-		return;
+		printf("L%u: can't pop an empty stack\n", count);
+		exit(EXIT_FAILURE);
 	}
-	for (a = 0; global_queue[a] != '\0'; a++)
+
+	node = malloc(sizeof(stack_t));
+	if (node == NULL)
 	{
-		if (global_queue[0] == '-' && a == 0)
-			a++;
-		if (global_queue[a] < '0' || global_queue[a] > '9')
-
-			fprintf(stderr, "L%d: usage: push integer\n", count);
-			global_queue = "error";
-			return;
-
+		printf("Error: malloc failed\n");
+		exit(EXIT_FAILURE);
 	}
-	stack_queue(&(*stack));
+
+
+	node->n = atoi(n);
+	node->prev = NULL;
+	node->next = *stack;
+
+	if (*stack != NULL)
+	{
+		(*stack)->prev = node;
+	}
+
+	*stack = node;
 }

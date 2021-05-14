@@ -12,8 +12,8 @@ void commands(stack_t **stack, char *op, unsigned int line_num)
 {
 	int i;
 	instruction_t ops[] = {
-		{"push", prueba_print},
-		/*{"pall", pall},*/
+		{"push", _push},
+		{"pall", _pall},
 		{NULL, NULL}
 	};
 

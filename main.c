@@ -1,7 +1,5 @@
 #include "monty.h"
 
-stack_t **global_queue;
-
 /**
  * main - main
  * @argc: counter arguments
@@ -12,7 +10,6 @@ stack_t **global_queue;
 int main(int argc, char *argv[])
 {
 	stack_t *head;
-	char prueba;
 
 	head = NULL;
 
@@ -21,8 +18,6 @@ int main(int argc, char *argv[])
 		printf("USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-
-	global_queue = &head;
 
 	open_file(argv[1], &head);
 }
