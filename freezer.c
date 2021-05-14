@@ -2,7 +2,6 @@
 
 /**
  * frezzer - main
- * @stack: pointer
  * Return: exit
 */
 

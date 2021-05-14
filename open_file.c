@@ -34,6 +34,6 @@ void open_file(char *file, stack_t **stack)
 
 	if (line)
 		free(line);
-		
+
 	fclose(arch);
 }
