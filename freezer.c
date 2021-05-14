@@ -8,7 +8,7 @@ void frezzer(stack_t **stack)
 
 	if (stack)
 	{
-		temp = stack->next;
+		temp = (*stack)->next;
 		while (frees)
 		{
 			free(frees);
