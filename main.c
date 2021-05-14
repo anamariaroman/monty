@@ -1,5 +1,7 @@
 #include "monty.h"
 
+stack_t **global_queue;
+
 /**
  * main - main
  * @argc: counter arguments
@@ -11,6 +13,7 @@ int main(int argc, char *argv[])
 {
 	stack_t *head;
 
+	global_queue = &head;
 	head = NULL;
 
 	if (argc != 2)
@@ -20,4 +23,6 @@ int main(int argc, char *argv[])
 	}
 
 	open_file(argv[1], &head);
+
+	exit(EXIT_SUCCESS);
 }

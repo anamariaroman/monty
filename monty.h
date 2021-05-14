@@ -41,7 +41,8 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-/* VARIABLE */
+extern stack_t **global_queue;
+
 
 /* FUNCIONES */
 int main(int argc, char *argv[]);
