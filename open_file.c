@@ -28,7 +28,7 @@ void open_file(char *file, stack_t **stack)
 		command = strtok(line, " \n\r\t");
 		count++;
 
-		if(command)
+		if (command)
 			commands(stack, command, count);
 	}
 

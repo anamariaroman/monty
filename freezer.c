@@ -6,20 +6,19 @@
  * Return: exit
 */
 
-void frezzer(stack_t **stack)
+void frezzer(void)
 {
-	stack_t *frees = *stack;
-	stack_t *temp;
+	stack_t *frees;
+	stack_t *temp = NULL;
 
-	if (stack)
+	frees = *global_queue;
+
+	while (frees)
 	{
-		temp = (*stack)->next;
-		while (frees)
-		{
-			free(frees);
-			frees = temp;
-			if (temp)
-				temp = temp->next;
-		}
+		temp = frees->next;
+
+		free(frees);
+
+		frees = temp;
 	}
 }
