@@ -42,6 +42,8 @@ typedef struct instruction_s
 } instruction_t;
 
 
+extern stack_t **global_queue;
+
 /* FUNCIONES */
 int main(int argc, char *argv[]);
 void open_file(char *file, stack_t **stack);
