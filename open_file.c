@@ -28,9 +28,12 @@ void open_file(char *file, stack_t **stack)
 		command = strtok(line, " \n\r\t");
 		count++;
 
-		commands(stack, command, count);
+		if(command)
+			commands(stack, command, count);
 	}
 
-	free(line);
+	if (line)
+		free(line);
+		
 	fclose(arch);
 }

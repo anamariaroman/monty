@@ -11,13 +11,13 @@ int main(int argc, char *argv[])
 {
 	stack_t *head;
 
-	head = NULL;
-
 	if (argc != 2)
 	{
 		printf("USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
+
+	head = NULL;
 
 	open_file(argv[1], &head);
 
