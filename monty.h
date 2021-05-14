@@ -46,9 +46,8 @@ typedef struct instruction_s
 /* FUNCIONES */
 int main(int argc, char *argv[]);
 void open_file(char *file, stack_t **stack);
-void prueba_print(stack_t **stack, unsigned int line_number);
 void commands(stack_t **stack, char *op, unsigned int line_num);
-void _push(stack_t **stack, unsigned int count);
-void _pall(stack_t **stack, unsigned int count __attribute__((unused)));
+void _push(stack_t **stack, unsigned int line_number);
+void _pall(stack_t **stack, unsigned int line_number);
 
 #endif

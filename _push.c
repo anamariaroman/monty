@@ -3,9 +3,10 @@
 /**
  * _push - adds the new node in the stack.
  * @stack: top of the stack.
- * @count: line_number.
- */
-void _push(stack_t **stack, unsigned int count)
+ * @line_number: line_number.
+*/
+
+void _push(stack_t **stack, unsigned int line_number)
 {
 	char *n;
 	stack_t *node;
@@ -13,7 +14,7 @@ void _push(stack_t **stack, unsigned int count)
 	n = strtok(NULL, " \n\r\t");
 	if (n == NULL)
 	{
-		printf("L%u: can't pop an empty stack\n", count);
+		printf("L%u: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -23,7 +24,6 @@ void _push(stack_t **stack, unsigned int count)
 		printf("Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-
 
 	node->n = atoi(n);
 	node->prev = NULL;
