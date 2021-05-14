@@ -23,6 +23,7 @@ void _push(stack_t **stack, unsigned int line_number)
 	{
 		printf("Error: malloc failed\n");
 		exit(EXIT_FAILURE);
+		free(node);
 	}
 
 	node->n = atoi(n);
