@@ -41,8 +41,6 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern stack_t **global_queue;
-
 
 /* FUNCIONES */
 int main(int argc, char *argv[]);
@@ -50,5 +48,6 @@ void open_file(char *file, stack_t **stack);
 void commands(stack_t **stack, char *op, unsigned int line_num);
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
+void _pint(stack_t **stack, unsigned int line_number);
 
 #endif

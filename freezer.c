@@ -1,5 +1,10 @@
 #include "monty.h"
 
+/**
+ * frezzer - main
+ * @stack: pointer
+ * Return: exit
+*/
 
 void frezzer(stack_t **stack)
 {
