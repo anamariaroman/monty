@@ -20,11 +20,8 @@ void commands(stack_t **stack, char *op, unsigned int line_num)
 		{"add", _add},
 		{"nop", _nop},
 		{"sub", _sub},
-<<<<<<< HEAD
 		{"mul", _mul},
-=======
-		{"div", _div},
->>>>>>> be23057c2f2ec0144ff3eeded067a226faf6ae6f
+		{"div",_div},
 		{NULL, NULL}
 	};
 

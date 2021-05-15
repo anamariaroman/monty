@@ -57,11 +57,8 @@ void _swap(stack_t **stack, unsigned int line_number);
 void _add(stack_t **stack, unsigned int line_number);
 void _nop(stack_t **stack, unsigned int line_number);
 void _sub(stack_t **stack, unsigned int line_number);
-<<<<<<< HEAD
 void _mul(stack_t **stack, unsigned int line_number);
-=======
 void _div(stack_t **stack, unsigned int line_number);
->>>>>>> be23057c2f2ec0144ff3eeded067a226faf6ae6f
 
 /* UTIL */
 int is_digit(char *string);
