@@ -1,2 +1,4 @@
-push 98
-add
+push 12
+push 0
+div
+pill
