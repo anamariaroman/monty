@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * nop - lol this does nothing
- * @stack: doesnt matter
- * @line_number: for nothing
+ * nop - nothing
+ * @stack: top of the stack.
+ * @line_number: line_number.
  * Return: NOTHING
 */
 
