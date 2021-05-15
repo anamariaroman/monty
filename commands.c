@@ -16,6 +16,7 @@ void commands(stack_t **stack, char *op, unsigned int line_num)
 		{"pall", _pall},
 		{"pint", _pint},
 		{"pop", _pop},
+		{"swap", _swap},
 		{NULL, NULL}
 	};
 
