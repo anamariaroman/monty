@@ -1,4 +1,4 @@
-push hola
+push 1
 push 0 onto the stack
 push 1 Push 1 onto the stack
 
