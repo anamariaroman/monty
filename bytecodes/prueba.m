@@ -1,1 +1,4 @@
- push + pint + pop + swap + pall
+push 12
+push 0
+div
+pill

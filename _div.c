@@ -13,11 +13,18 @@ void _div(stack_t **stack, unsigned int line_number)
 
 	if (!stack || !(*stack) || !(*stack)->next)
 	{
-		fprintf(stderr, "L%u: can't sub, stack too short\n", line_number);
+		fprintf(stderr, "L%u: can't div, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
 	aux = *stack;
+
+	if (aux->n == 0)
+	{
+		fprintf(stderr, "L%u: division by zero\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
 	division = aux->next->n / aux->n;
 	aux->next->n = division;
 
