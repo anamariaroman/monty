@@ -1,2 +1,1 @@
-push 98
-add
+ push + pint + pop + swap + pall
