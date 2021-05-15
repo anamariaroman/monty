@@ -26,11 +26,11 @@ void commands(stack_t **stack, char *op, unsigned int line_num)
 			ops[i].f(stack, line_num);
 			return;
 		}
-	}
 
-	if (strlen(op) != 0 && op[0] != '#')
-	{
-		fprintf(stderr, "L%u: unknown instruction %s\n", line_num, op);
-		exit(EXIT_FAILURE);
+		if (strlen(op) != 0 && op[0] != '#')
+		{
+			fprintf(stderr, "L%u: unknown instruction %s\n", line_num, op);
+			exit(EXIT_FAILURE);
+		}
 	}
 }
