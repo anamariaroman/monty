@@ -19,7 +19,7 @@ void open_file(char *file, stack_t **stack)
 	arch = fopen(file, "r");
 	if (!arch)
 	{
-		printf("Error: Can't open file %s\n", file);
+		fprintf(stderr, "Error: Can't open file %s\n", file);
 		exit(EXIT_FAILURE);
 	}
 
