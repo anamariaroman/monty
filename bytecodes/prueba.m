@@ -1,4 +1,2 @@
-push 12
-push 4
-mod
-pall
+push 128
+pchar
