@@ -21,6 +21,7 @@ void commands(stack_t **stack, char *op, unsigned int line_num)
 		{"nop", _nop},
 		{"sub", _sub},
 		{"div", _div},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 
