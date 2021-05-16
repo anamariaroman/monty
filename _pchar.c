@@ -8,7 +8,7 @@
 
 void _pchar(stack_t **stack, unsigned int line_number)
 {
-	int num;
+	int caracter;
 
 	if (!stack || !(*stack))
 	{
@@ -16,13 +16,13 @@ void _pchar(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	num = (*stack)->n;
+	caracter = (*stack)->n;
 
-	if (!isascii(num))
+	if (!isascii(caracter))
 	{
 		printf("L%u: can't pchar, value out of range\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
-	printf("%c\n", num);
+	printf("%c\n", caracter);
 }
